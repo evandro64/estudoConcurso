@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("plugin.serialization") version "1.9.10"
-    //id("com.google.gms.google-services")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -81,7 +81,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    /*implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-database")
     implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
-    implementation("com.google.firebase:firebase-analytics")*/
+    implementation("com.google.firebase:firebase-analytics")
 }

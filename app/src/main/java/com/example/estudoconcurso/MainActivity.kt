@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import com.example.estudoconcurso.ui.screens.AddressForm
 import com.example.estudoconcurso.ui.theme.EstudoConcursoTheme2
 import com.example.estudoconcurso.ui.viewModels.AddressViewModel
-/*import com.google.firebase.Firebase
-import com.google.firebase.database.database*/
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 
@@ -37,14 +37,14 @@ class MainActivity : ComponentActivity() {
                     AddressForm(
                         uiState,
                         onSearchAddressClick = { cep ->
-                            /*scope.launch {
+                            scope.launch {
                                 viewModel.findAddress(cep)
-                            }*/
-                            /*// Write a message to the database
+                            }
+                            // Write a message to the database
                             val database = Firebase.database
                             val myRef = database.getReference("message")
 
-                            myRef.setValue("Hello, World!")*/
+                            myRef.setValue("Hello, World!")
                         }
                     )
                 }
