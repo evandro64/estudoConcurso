@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1036839196463",
+    "firebase_url": "https://estudo-concurso-858af-default-rtdb.firebaseio.com",
+    "project_id": "estudo-concurso-858af",
+    "storage_bucket": "estudo-concurso-858af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036839196463:android:be114d3e00e0bb59d0f3da",
+        "android_client_info": {
+          "package_name": "com.example.estudoconcurso"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd29q7vLA0OB-611KM0q-uuRnCB94puIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
