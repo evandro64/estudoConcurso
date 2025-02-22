@@ -1,7 +1,9 @@
 package com.example.estudoconcurso.di
 
 import com.example.estudoconcurso.repositories.AddressRepository
+import com.example.estudoconcurso.repositories.UserRepository
 import com.example.estudoconcurso.ui.viewModels.AddressViewModel
+import com.example.estudoconcurso.ui.viewModels.UserViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -16,6 +18,11 @@ import org.koin.dsl.module
 val  appModule = module {
     singleOf(::AddressRepository)
     viewModelOf(::AddressViewModel)
+}
+
+val userModule = module {
+    singleOf(::UserRepository)
+    singleOf(::UserViewModel)
 }
 
 val networkModule = module {
