@@ -14,8 +14,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import com.example.estudoconcurso.ui.screens.AddressForm
+import com.example.estudoconcurso.ui.screens.UserForm
 import com.example.estudoconcurso.ui.theme.EstudoConcursoTheme2
 import com.example.estudoconcurso.ui.viewModels.AddressViewModel
+import com.example.estudoconcurso.ui.viewModels.UserViewModel
 /*import com.google.firebase.Firebase
 import com.google.firebase.database.database*/
 import kotlinx.coroutines.launch
@@ -34,17 +36,22 @@ class MainActivity : ComponentActivity() {
                     val scope = rememberCoroutineScope()
                     val viewModel = koinViewModel<AddressViewModel>()
                     val uiState by viewModel.uiState.collectAsState()
-                    AddressForm(
+                    /*AddressForm(
                         uiState,
                         onSearchAddressClick = { cep ->
-                            /*scope.launch {
+                            scope.launch {
                                 viewModel.findAddress(cep)
-                            }*/
-                            /*// Write a message to the database
-                            val database = Firebase.database
-                            val myRef = database.getReference("message")
-
-                            myRef.setValue("Hello, World!")*/
+                            }
+                        }
+                    )*/
+                    val userViewModel = koinViewModel<UserViewModel>()
+                    val userUiState by userViewModel.uiState.collectAsState()
+                    UserForm(
+                        userUiState,
+                        onSearchAddressClick = { cep ->
+                            scope.launch {
+                                userViewModel.findUsers(cep)
+                            }
                         }
                     )
                 }
